@@ -1,0 +1,10 @@
+.DS_Store
+
+/node_modules
+/.tmp
+/.sass-cache
+/bower_components
+/npm-debug.log
+
+/app/styles/**/*.css
+/css
