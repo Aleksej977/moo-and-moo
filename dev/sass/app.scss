@@ -11,4 +11,31 @@ body {
     -moz-font-feature-settings: "kern";
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.btn {
+    font-family: inherit;
+    font-size: 16px;
+    padding: 14px 20px;
+    cursor: pointer;
+    overflow: visible;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    border: 0px solid transparent;
+    border-radius: 0;
+    outline: none;
+    background-color: transparent;
+    border-radius: .2rem;
+    color: #fff;
+    transition: all .195s ease-in-out;
+    text-transform: uppercase;
+    &--primary {
+        background: orange;
+    }
 }
