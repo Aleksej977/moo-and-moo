@@ -6,7 +6,7 @@ var gulp = require('gulp'),
     imageop = require('gulp-imagemin');
 
 var paths = {
-      sassInputFiles: ['./dev/sass/*.scss'],
+      sassInputFiles: ['./dev/sass/**/*.scss'],
       cssOutputFolder: './public/css/',
       htmlInputFiles: ['./dev/**/*.html']
     },
