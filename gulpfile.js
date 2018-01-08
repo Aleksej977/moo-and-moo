@@ -3,10 +3,12 @@ var gulp = require('gulp'),
     notify = require("gulp-notify"),
     sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
-    imageop = require('gulp-imagemin');
+    newer = require('gulp-newer'),
+    image = require('gulp-image');
 
 var paths = {
       sassInputFiles: ['./dev/sass/**/*.scss'],
+      imgInputFiles: ['./dev/assets/img/*.*'],
       cssOutputFolder: './public/css/',
       htmlInputFiles: ['./dev/**/*.html']
     },
@@ -20,9 +22,6 @@ var paths = {
       autopref: {
                   browsers: ['IE >= 9']
                 },
-      imageOp: {
-          optimizationLevel: 5,
-        }
     }
 // Static server
 gulp.task('browser-sync', function() {
@@ -41,8 +40,19 @@ gulp.task('sass', function() {
 
 gulp.task('images', function(cb) {
     return gulp.src(['./dev/assets/img/*.*'])
-        .pipe(imageop(opt.imageOp))
-        .pipe(gulp.dest('./public/img/min')).on('end', cb).on('error', cb);
+        .pipe(newer('./public/img/min'))
+        .pipe(image({
+          pngquant: true,
+          optipng: false,
+          zopflipng: true,
+          jpegRecompress: false,
+          mozjpeg: true,
+          guetzli: false,
+          gifsicle: true,
+          svgo: true,
+          concurrent: 10
+        }))
+        .pipe(gulp.dest('./public/img/min'));
 });
 
 gulp.task('run', ['sass', 'images', 'browser-sync'], function() {
@@ -50,6 +60,7 @@ gulp.task('run', ['sass', 'images', 'browser-sync'], function() {
         message: "I'm Initialized My Lord!",
         onLast: true
     }));
-    gulp.watch(paths.sassInputFiles, ['sass']);
+    gulp.watch(paths.imgInputFiles, ['images']).on('change', browserSync.reload);
+    gulp.watch(paths.sassInputFiles, ['sass']).on('change', browserSync.reload);
     gulp.watch(paths.htmlInputFiles).on('change', browserSync.reload);
 });

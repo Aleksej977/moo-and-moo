@@ -114,10 +114,25 @@ p + ul {
 
 .osp-page-block {
   padding: 90px 0; }
+  .osp-page-block-inner {
+    z-index: 1;
+    text-align: center;
+    position: relative; }
   .osp-page-block--about {
     background: url(../img/min/about_laptop.png) no-repeat 90% right/50vw; }
   .osp-page-block--portfolio {
     background-color: #efefef; }
+  .osp-page-block--contacts {
+    position: relative;
+    background: url(../img/min/pexels.jpeg) no-repeat center center/cover; }
+    .osp-page-block--contacts:before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6); }
 
 .osp-about__inner {
   max-width: 600px; }

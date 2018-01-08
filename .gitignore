@@ -6,5 +6,5 @@
 /bower_components
 /npm-debug.log
 
-/app/styles/**/*.css
-/css
+/public/img
+/public/css

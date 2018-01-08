@@ -1,5 +1,10 @@
 .osp-page-block{
     padding: 90px 0;
+    &-inner{
+    z-index: 1;
+    text-align: center;
+    position: relative;
+}
     &--about{
       background: url(../img/min/about_laptop.png) no-repeat 90% right / 50vw; 
 //        @media screen and (max-width 768px){
@@ -8,6 +13,19 @@
     }
     &--portfolio{
         background-color: #efefef;
+    }
+    &--contacts{
+        position: relative;
+        background: url(../img/min/pexels.jpeg) no-repeat center center / cover;
+        &:before{
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+        }
     }
 }
 .osp-about__inner{max-width:600px;}
