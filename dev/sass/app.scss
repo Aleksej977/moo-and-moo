@@ -1,5 +1,8 @@
 @import "./vendor/_reset";
+@import "_typo";
 @import "./partials/_hero";
+@import "./partials/_page-block";
+
 
 body {
 	font-synthesis: none;
@@ -12,12 +15,17 @@ body {
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
     font-family: 'Open Sans', sans-serif;
+    line-height: 1.2;
 }
 
 *{
     box-sizing: border-box;
 }
-
+.container{
+    max-width: 1200px;
+    padding:0 15px;
+    margin: 0 auto;
+}
 .btn {
     font-family: inherit;
     font-size: 16px;
@@ -37,5 +45,15 @@ body {
     text-transform: uppercase;
     &--primary {
         background: orange;
+    }
+}
+.osp{
+    &-title{
+        color:orange;
+        border-left:4px solid orange;
+        display: inline-block;
+        text-indent: 16px;
+        font-weight: 600;
+        &+*{margin-top: 32px;}
     }
 }

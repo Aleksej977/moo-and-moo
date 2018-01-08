@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -40,6 +41,41 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+h1,
+.h1 {
+  font-size: 46px; }
+
+h2,
+.h2 {
+  font-size: 38px; }
+
+h3,
+.h3 {
+  font-size: 22px; }
+
+b, strong {
+  font-weight: 600; }
+
+ul + * {
+  margin-top: 30px; }
+
+ul li {
+  margin-left: 24px; }
+  ul li + li {
+    margin-top: 12px; }
+
+ul li:before {
+  content: '✔';
+  margin-left: -20px;
+  color: orange;
+  position: absolute; }
+
+p + p {
+  margin-top: 16px; }
+
+p + ul {
+  margin-top: 28px; }
+
 .osp-hero {
   background: url(../img/min/header_bg2.jpg) no-repeat center center/cover;
   width: 100%;
@@ -76,6 +112,14 @@ table {
   .osp-hero .btn {
     margin-top: 32px; }
 
+.osp-page-block {
+  padding: 90px 0; }
+  .osp-page-block--about {
+    background: url(../img/min/about_laptop.png) no-repeat bottom right/50vw; }
+
+.osp-about__inner {
+  max-width: 600px; }
+
 body {
   font-synthesis: none;
   -moz-osx-font-smoothing: grayscale;
@@ -85,10 +129,16 @@ body {
   -moz-font-feature-settings: "kern";
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  font-family: 'Open Sans', sans-serif; }
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.2; }
 
 * {
   box-sizing: border-box; }
+
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto; }
 
 .btn {
   font-family: inherit;
@@ -109,3 +159,12 @@ body {
   text-transform: uppercase; }
   .btn--primary {
     background: orange; }
+
+.osp-title {
+  color: orange;
+  border-left: 4px solid orange;
+  display: inline-block;
+  text-indent: 16px;
+  font-weight: 600; }
+  .osp-title + * {
+    margin-top: 32px; }
