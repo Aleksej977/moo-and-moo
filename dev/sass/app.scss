@@ -5,7 +5,7 @@
 
 
 body {
-	font-synthesis: none;
+    font-synthesis: none;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
@@ -18,14 +18,16 @@ body {
     line-height: 1.2;
 }
 
-*{
+* {
     box-sizing: border-box;
 }
-.container{
+
+.container {
     max-width: 1200px;
-    padding:0 15px;
+    padding: 0 15px;
     margin: 0 auto;
 }
+
 .btn {
     font-family: inherit;
     font-size: 16px;
@@ -47,21 +49,30 @@ body {
         background: orange;
     }
 }
-.osp{
-    &-title{
-        color:orange;
-        border-left:4px solid orange;
+
+.osp {
+    &-title {
+        color: orange;
+        border-left: 4px solid orange;
         display: inline-block;
         text-indent: 16px;
         font-weight: 600;
-        &+*{margin-top: 32px;}
+        & + * {
+            margin-top: 32px;
+        }
     }
 }
+
 img {
     display: inline-block;
     max-width: 100%;
 }
-.slick-next:before, .slick-prev:before {color:orange;}
-.slick-slide{
+
+.slick-next:before,
+.slick-prev:before {
+    color: orange;
+}
+
+.slick-slide {
     padding: 0px 5px;
 }

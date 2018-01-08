@@ -2,36 +2,59 @@ h1,
 .h1 {
     font-size: 46px;
 }
+
 h2,
 .h2 {
     font-size: 38px;
 }
+
 h3,
 .h3 {
     font-size: 22px;
 }
 
-b,strong {
+b,
+strong {
     font-weight: 600;
 }
-ul{
-    &+*{margin-top: 30px;}
-    li{
-        margin-left: 24px;
-        &+li{
-            margin-top: 12px;
+
+.osp-list {
+    & + * {
+        margin-top: 30px;
+    }
+
+    &--vertical {
+        li {
+            margin-left: 24px;
+            & + li {
+                margin-top: 12px;
+            }
         }
     }
-    li:before{
-        content:'✔';
-        margin-left: -20px;
-        color:orange;
-        position: absolute;
+    &--horizontal {
+        li {
+            display: inline-block;
+        }
+        
     }
+
+    &--check-mark {
+        li:before {
+            content: '✔';
+            margin-left: -20px;
+            color: orange;
+            position: absolute;
+        }
+    }
+
+
+
 }
-p+p{
+
+p + p {
     margin-top: 16px;
 }
-p+ul{
+
+p + ul {
     margin-top: 28px;
 }

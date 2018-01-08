@@ -1,4 +1,4 @@
-.osp-hero{
+.osp-hero {
     background: url(../img/min/header_bg2.jpg) no-repeat center center / cover;
     width: 100%;
     height: 100vh;
@@ -7,34 +7,41 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    &:before{
+    &:before {
         position: absolute;
         content: '';
         top: 0;
         left: 0;
         width: inherit;
         height: inherit;
-        background: rgba(0,0,0,0.24);
+        background: rgba(0, 0, 0, 0.24);
     }
-    &-inner{
+    &-inner {
         z-index: 1;
         text-align: center;
     }
-    &__text{
-        color:white;
+    &__text {
+        color: white;
         line-height: 1.4;
-        
-        &--big{
+
+        &--big {
             font-size: 92px;
         }
-        &--md{
+        &--md {
             font-size: 64px;
+        @media screen and (max-width: 640px) {
+            font-size: 32px;
         }
-        &--sm{
+        }
+        &--sm {
             font-size: 46px;
+             @media screen and (max-width: 640px) {
+            font-size: 26px;
+        }
         }
     }
-    .btn{
+    .btn {
+        display: inline-block;
         margin-top: 32px;
     }
 }

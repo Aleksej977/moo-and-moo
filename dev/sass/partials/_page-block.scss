@@ -1,31 +1,63 @@
-.osp-page-block{
+.osp-page-block {
     padding: 90px 0;
-    &-inner{
-    z-index: 1;
-    text-align: center;
-    position: relative;
-}
-    &--about{
-      background: url(../img/min/about_laptop.png) no-repeat 90% right / 50vw; 
-//        @media screen and (max-width 768px){
-//         display: block;   
-//        }
+    &-inner {
+        z-index: 1;
+        text-align: center;
+        position: relative;
     }
-    &--portfolio{
+    &--about {
+        background: url(../img/min/about_laptop.png) no-repeat bottom right / 50vw;
+        margin-bottom: 30px;
+        @media screen and (max-width: 768px) {
+            background: url(../img/min/about_laptop.png) no-repeat bottom right/65vw;
+            padding-bottom: 180px;
+        }
+        @media screen and (max-width: 600px) {
+            background: url(../img/min/about_laptop.png) no-repeat bottom right/90vw;
+            padding-bottom: 280px;
+        }
+        @media screen and (max-width: 480px) {
+            padding-bottom: 250px;
+        }
+        @media screen and (max-width: 400px) {
+            padding-bottom: 230px;
+        }
+    }
+    &--portfolio {
         background-color: #efefef;
+        .slick {
+            margin-left: 28px;
+            margin-right: 28px;
+        }
     }
-    &--contacts{
+    &--contacts {
         position: relative;
         background: url(../img/min/pexels.jpeg) no-repeat center center / cover;
-        &:before{
+        color: white;
+        &:before {
             position: absolute;
             content: '';
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0,0,0,0.6);
+            background: rgba(0, 0, 0, 0.6);
+        }
+        .osp-list {
+            justify-content: space-around;
+            display: flex;
+            margin: 40px 0px;
+
+            @media screen and (max-width: 640px) {
+                flex-flow: column;
+                li + li {
+                    margin-top: 20px;
+                }
+            }
         }
     }
 }
-.osp-about__inner{max-width:600px;}
+
+.osp-about__inner {
+    max-width: 600px;
+}

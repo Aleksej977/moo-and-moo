@@ -53,18 +53,22 @@ h3,
 .h3 {
   font-size: 22px; }
 
-b, strong {
+b,
+strong {
   font-weight: 600; }
 
-ul + * {
+.osp-list + * {
   margin-top: 30px; }
 
-ul li {
+.osp-list--vertical li {
   margin-left: 24px; }
-  ul li + li {
+  .osp-list--vertical li + li {
     margin-top: 12px; }
 
-ul li:before {
+.osp-list--horizontal li {
+  display: inline-block; }
+
+.osp-list--check-mark li:before {
   content: '✔';
   margin-left: -20px;
   color: orange;
@@ -107,9 +111,16 @@ p + ul {
       font-size: 92px; }
     .osp-hero__text--md {
       font-size: 64px; }
+      @media screen and (max-width: 640px) {
+        .osp-hero__text--md {
+          font-size: 32px; } }
     .osp-hero__text--sm {
       font-size: 46px; }
+      @media screen and (max-width: 640px) {
+        .osp-hero__text--sm {
+          font-size: 26px; } }
   .osp-hero .btn {
+    display: inline-block;
     margin-top: 32px; }
 
 .osp-page-block {
@@ -119,12 +130,31 @@ p + ul {
     text-align: center;
     position: relative; }
   .osp-page-block--about {
-    background: url(../img/min/about_laptop.png) no-repeat 90% right/50vw; }
+    background: url(../img/min/about_laptop.png) no-repeat bottom right/50vw;
+    margin-bottom: 30px; }
+    @media screen and (max-width: 768px) {
+      .osp-page-block--about {
+        background: url(../img/min/about_laptop.png) no-repeat bottom right/65vw;
+        padding-bottom: 180px; } }
+    @media screen and (max-width: 600px) {
+      .osp-page-block--about {
+        background: url(../img/min/about_laptop.png) no-repeat bottom right/90vw;
+        padding-bottom: 280px; } }
+    @media screen and (max-width: 480px) {
+      .osp-page-block--about {
+        padding-bottom: 250px; } }
+    @media screen and (max-width: 400px) {
+      .osp-page-block--about {
+        padding-bottom: 230px; } }
   .osp-page-block--portfolio {
     background-color: #efefef; }
+    .osp-page-block--portfolio .slick {
+      margin-left: 28px;
+      margin-right: 28px; }
   .osp-page-block--contacts {
     position: relative;
-    background: url(../img/min/pexels.jpeg) no-repeat center center/cover; }
+    background: url(../img/min/pexels.jpeg) no-repeat center center/cover;
+    color: white; }
     .osp-page-block--contacts:before {
       position: absolute;
       content: '';
@@ -133,6 +163,18 @@ p + ul {
       width: 100%;
       height: 100%;
       background: rgba(0, 0, 0, 0.6); }
+    .osp-page-block--contacts .osp-list {
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+      display: -ms-flexbox;
+      display: flex;
+      margin: 40px 0px; }
+      @media screen and (max-width: 640px) {
+        .osp-page-block--contacts .osp-list {
+          -ms-flex-flow: column;
+              flex-flow: column; }
+          .osp-page-block--contacts .osp-list li + li {
+            margin-top: 20px; } }
 
 .osp-about__inner {
   max-width: 600px; }
@@ -190,7 +232,8 @@ img {
   display: inline-block;
   max-width: 100%; }
 
-.slick-next:before, .slick-prev:before {
+.slick-next:before,
+.slick-prev:before {
   color: orange; }
 
 .slick-slide {

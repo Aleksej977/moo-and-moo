@@ -19,7 +19,7 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,700i" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" rel="stylesheet">
-  
+  <link href="./js/fm.revealator.jquery.css" type="text/css" rel="stylesheet">
   <link href="./css/app.css" type="text/css" rel="stylesheet">
 </head>
 <body class="osp-app">
@@ -28,14 +28,14 @@
        <div class="osp-hero-inner">
         <div class="osp-hero__text osp-hero__text--md">Oleksii Stoliar</div>
         <div class="osp-hero__text osp-hero__text--sm">Front end - unicorn</div>
-        <button class="btn btn--primary">My project</button>
+        <a href="https://github.com/Aleksej977/moo-and-moo" class="btn btn--primary" target="_blank">My project</a>
        </div>
         
   </header>
   <main class="osp-body">
       <section class="osp-page-block osp-page-block--about">
         <div class="container">
-          <div class="osp-about__inner">
+          <div class="osp-about__inner revealator-slideright revealator-delay2">
            <h4 class="h2 osp-title">ABOUT</h4>
            <p>Hi my name is Alex, I'm junior unicorn in Moo&Moo, I have a big passion for creating useful and beautiful things and always keeping focus on the end user - as well as the clients' vision.</p>
            <p>Good level in coding valid Mobile first and RWD markup with CSS3 and HTML5, basic level of JS
@@ -43,7 +43,7 @@
        </p>  
            <p><b>I will help you to get your products and services website, to be done right.</b></p>
            
-       <ul>
+       <ul class="osp-list--vertical osp-list--check-mark osp-list">
            <li>Coding responsive layouts from PSD sources</li>
            <li>Integration with CMS’s (Concrete5, Wordpress)</li>
            <li>RWD markup with CSS3 and HTML5</li>
@@ -67,13 +67,14 @@
   <section class="osp-page-block osp-page-block--contacts">
       <div class="container">
           <div class="osp-page-block-inner">
-                <div class="osp-hero__text osp-hero__text--md">MY CONTACTS</div>
-                <ul>
+                <div class="osp-hero__text osp-hero__text--md">GET IN TOUCH</div>
+                <p>Contact me and watch how your ideas becomes into great results</p>
+                <ul class="osp-list osp-list--horizontal">
                     <li>Skype: oleksiistoliar</li>
                     <li>E-mail: oleksiistoliar@gmail.com</li>
                     <li>Phone: +38 063 940 72 69</li>
                 </ul>
-                <button class="btn btn--primary">My project</button>
+                <button class="btn btn--primary">Contact me</button>
        </div>
       </div>
   </section>      
@@ -87,7 +88,7 @@
   <!-- SCRIPTS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-
+  <script src="./js/fm.revealator.jquery.js"></script>
   <script src="./js/app.js"></script>
   <!-- eof SCRIPTS -->
 </body>

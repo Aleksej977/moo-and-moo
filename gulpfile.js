@@ -4,7 +4,7 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
     newer = require('gulp-newer'),
-    image = require('gulp-image');
+    imagemin = require('gulp-imagemin');
 
 var paths = {
       sassInputFiles: ['./dev/sass/**/*.scss'],
@@ -41,16 +41,11 @@ gulp.task('sass', function() {
 gulp.task('images', function(cb) {
     return gulp.src(['./dev/assets/img/*.*'])
         .pipe(newer('./public/img/min'))
-        .pipe(image({
-          pngquant: true,
-          optipng: false,
-          zopflipng: true,
-          jpegRecompress: false,
-          mozjpeg: true,
-          guetzli: false,
-          gifsicle: true,
-          svgo: true,
-          concurrent: 10
+        .pipe(imagemin({
+            interlaced: true,
+            progressive: true,
+            optimizationLevel: 5,
+            svgoPlugins: [{removeViewBox: true}]
         }))
         .pipe(gulp.dest('./public/img/min'));
 });
