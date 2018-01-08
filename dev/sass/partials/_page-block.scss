@@ -1,7 +1,13 @@
 .osp-page-block{
     padding: 90px 0;
     &--about{
-      background: url(../img/min/about_laptop.png) no-repeat bottom right / 50vw; 
+      background: url(../img/min/about_laptop.png) no-repeat 90% right / 50vw; 
+//        @media screen and (max-width 768px){
+//         display: block;   
+//        }
+    }
+    &--portfolio{
+        background-color: #efefef;
     }
 }
 .osp-about__inner{max-width:600px;}

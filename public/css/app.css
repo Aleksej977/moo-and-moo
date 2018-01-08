@@ -115,7 +115,9 @@ p + ul {
 .osp-page-block {
   padding: 90px 0; }
   .osp-page-block--about {
-    background: url(../img/min/about_laptop.png) no-repeat bottom right/50vw; }
+    background: url(../img/min/about_laptop.png) no-repeat 90% right/50vw; }
+  .osp-page-block--portfolio {
+    background-color: #efefef; }
 
 .osp-about__inner {
   max-width: 600px; }
@@ -168,3 +170,13 @@ body {
   font-weight: 600; }
   .osp-title + * {
     margin-top: 32px; }
+
+img {
+  display: inline-block;
+  max-width: 100%; }
+
+.slick-next:before, .slick-prev:before {
+  color: orange; }
+
+.slick-slide {
+  padding: 0px 5px; }

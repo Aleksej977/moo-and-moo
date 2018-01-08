@@ -57,3 +57,11 @@ body {
         &+*{margin-top: 32px;}
     }
 }
+img {
+    display: inline-block;
+    max-width: 100%;
+}
+.slick-next:before, .slick-prev:before {color:orange;}
+.slick-slide{
+    padding: 0px 5px;
+}
